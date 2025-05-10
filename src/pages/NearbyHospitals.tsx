@@ -62,6 +62,72 @@ const hospitals: Hospital[] = [
     rating: 4.0,
     emergency: false,
     specialties: ["Family Medicine"]
+  },
+  {
+    id: 5,
+    name: "Metro Emergency Hospital",
+    type: "General Hospital",
+    distance: "6.3 km",
+    address: "202 Highland Ave, Cityville",
+    phone: "+1-555-333-9999",
+    rating: 4.7,
+    emergency: true,
+    specialties: ["Trauma Center", "Neurology", "Emergency Surgery"]
+  },
+  {
+    id: 6,
+    name: "Children's Medical Institute",
+    type: "Specialized Hospital",
+    distance: "4.7 km",
+    address: "505 Cherry Lane, Cityville",
+    phone: "+1-555-888-7777",
+    rating: 4.9,
+    emergency: true,
+    specialties: ["Pediatrics", "Neonatal Care", "Pediatric Surgery"]
+  },
+  {
+    id: 7,
+    name: "Riverside Health Center",
+    type: "Medical Center",
+    distance: "7.2 km",
+    address: "890 River Rd, Riverside",
+    phone: "+1-555-444-3333",
+    rating: 4.0,
+    emergency: false,
+    specialties: ["Family Medicine", "Primary Care"]
+  },
+  {
+    id: 8,
+    name: "Oakwood Community Hospital",
+    type: "General Hospital",
+    distance: "8.5 km",
+    address: "1200 Oakwood Dr, Oakville",
+    phone: "+1-555-222-1111",
+    rating: 4.3,
+    emergency: true,
+    specialties: ["General Surgery", "Orthopedics", "Cardiology"]
+  },
+  {
+    id: 9,
+    name: "Valley Urgent Care",
+    type: "Urgent Care",
+    distance: "3.9 km",
+    address: "345 Valley Blvd, Cityville",
+    phone: "+1-555-666-5555",
+    rating: 3.9,
+    emergency: false,
+    specialties: ["Walk-in Care", "Minor Emergencies"]
+  },
+  {
+    id: 10,
+    name: "Lakeside Memorial Hospital",
+    type: "General Hospital",
+    distance: "9.8 km",
+    address: "777 Lakeview Dr, Lakeside",
+    phone: "+1-555-777-2222",
+    rating: 4.6,
+    emergency: true,
+    specialties: ["Cancer Treatment", "Cardiac Care", "Trauma Center"]
   }
 ];
 
@@ -114,6 +180,24 @@ const NearbyHospitals: React.FC = () => {
             onClick={() => setFilter('Pediatrics')}
           >
             Pediatrics
+          </Badge>
+          <Badge 
+            className={`cursor-pointer ${filter === 'Cardiology' ? 'bg-medical' : 'bg-gray-200 text-gray-700 hover:bg-medical'}`} 
+            onClick={() => setFilter('Cardiology')}
+          >
+            Cardiology
+          </Badge>
+          <Badge 
+            className={`cursor-pointer ${filter === 'Orthopedics' ? 'bg-medical' : 'bg-gray-200 text-gray-700 hover:bg-medical'}`} 
+            onClick={() => setFilter('Orthopedics')}
+          >
+            Orthopedics
+          </Badge>
+          <Badge 
+            className={`cursor-pointer ${filter === 'Neurology' ? 'bg-medical' : 'bg-gray-200 text-gray-700 hover:bg-medical'}`} 
+            onClick={() => setFilter('Neurology')}
+          >
+            Neurology
           </Badge>
         </div>
         
