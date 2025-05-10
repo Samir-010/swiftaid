@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { SOS } from "lucide-react";
+import { Bell } from "lucide-react";
 
 const EmergencySosButton: React.FC = () => {
   const handleSosClick = () => {
@@ -18,7 +18,7 @@ const EmergencySosButton: React.FC = () => {
           onClick={handleSosClick}
           className="bg-emergency hover:bg-emergency/90 rounded-full w-14 h-14 flex items-center justify-center shadow-lg"
         >
-          <SOS className="h-7 w-7" />
+          <Bell className="h-7 w-7" />
         </Button>
       </div>
     </div>
