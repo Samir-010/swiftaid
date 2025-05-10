@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import EmergencySosButton from "@/components/home/EmergencySosButton";
@@ -110,12 +111,14 @@ const EmergencyHelp: React.FC = () => {
           <TabsContent value="all" className="mt-0">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {filteredEmergencies.map((emergency) => (
-                <Card key={emergency.id} className="cursor-pointer hover:shadow-md transition-shadow">
-                  <CardHeader>
-                    <CardTitle>{emergency.title}</CardTitle>
-                    <CardDescription className="capitalize">{emergency.category}</CardDescription>
-                  </CardHeader>
-                </Card>
+                <Link key={emergency.id} to={`/emergency/${emergency.id}`}>
+                  <Card className="cursor-pointer hover:shadow-md transition-shadow">
+                    <CardHeader>
+                      <CardTitle>{emergency.title}</CardTitle>
+                      <CardDescription className="capitalize">{emergency.category}</CardDescription>
+                    </CardHeader>
+                  </Card>
+                </Link>
               ))}
             </div>
           </TabsContent>
@@ -124,12 +127,14 @@ const EmergencyHelp: React.FC = () => {
             <TabsContent key={category} value={category} className="mt-0">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {filteredEmergencies.map((emergency) => (
-                  <Card key={emergency.id} className="cursor-pointer hover:shadow-md transition-shadow">
-                    <CardHeader>
-                      <CardTitle>{emergency.title}</CardTitle>
-                      <CardDescription className="capitalize">{emergency.category}</CardDescription>
-                    </CardHeader>
-                  </Card>
+                  <Link key={emergency.id} to={`/emergency/${emergency.id}`}>
+                    <Card className="cursor-pointer hover:shadow-md transition-shadow">
+                      <CardHeader>
+                        <CardTitle>{emergency.title}</CardTitle>
+                        <CardDescription className="capitalize">{emergency.category}</CardDescription>
+                      </CardHeader>
+                    </Card>
+                  </Link>
                 ))}
               </div>
             </TabsContent>
